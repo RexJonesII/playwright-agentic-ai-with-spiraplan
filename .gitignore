@@ -1,0 +1,17 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/.playwright/
+/.playwright-cli/
+/.playwright-mcp/
+
+# Office lock files
+~$*.pptx
+
+# Claude Code local settings (personal, not shared)
+.claude/settings.local.json

@@ -1,0 +1,15 @@
+import { test, expect } from '@playwright/test';
+import { LoginPage } from '../../page_objects/LoginPage';
+import { RegistrationPage } from '../../page_objects/RegistrationPage';
+
+test('Verify The Registration Page Title Is Correct', async ({ page }) => {
+  await page.goto('/');
+  const loginPage = new LoginPage(page);
+  await loginPage.login('Success', 'Success3400');
+
+  const registrationPage = new RegistrationPage(page);
+  await registrationPage.clickPracticeForm();
+
+  await expect(registrationPage.pageHeading).toBeVisible();
+  await expect(registrationPage.pageSubheading).toBeVisible();
+});
